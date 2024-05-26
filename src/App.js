@@ -18,7 +18,6 @@ const authenticated = () => {
 	if (user) {
 		return true;
 	}
-
 	return false;
 };
 const router = createBrowserRouter([
