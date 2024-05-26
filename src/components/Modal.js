@@ -13,7 +13,6 @@ const cx = classNames.bind(styles);
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const Modal = ({ isOpen, children, id }) => {
-	// const [imageUrl, setImageUrl] = useState('');
 	const [imageUrls, setImageUrls] = useState([]);
 	const [postData, setPostData] = useState({
 		name: '',
@@ -45,13 +44,11 @@ const Modal = ({ isOpen, children, id }) => {
 		}
 		setImageUrls(urls);
 	};
-	console.log('ủl', imageUrls);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
 			const { name, category, short_desc, long_desc, price, quantity } =
 				postData;
-			console.log('quabtity', quantity);
 			const formDataForServer = {
 				name,
 				category,
@@ -71,7 +68,6 @@ const Modal = ({ isOpen, children, id }) => {
 			}
 			// Thực hiện các thao tác khác sau khi thêm sản phẩm thành công
 			dispatch(modalAction.closeModal());
-			console.log('res', res);
 		} catch (error) {
 			console.error('Error adding product:', error);
 		}

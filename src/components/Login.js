@@ -66,18 +66,11 @@ const Login = () => {
 							name='password'
 							placeholder='Password'
 						/>
-
-						{/* {error.passValue && (
-							<p style={{ color: 'red' }}>{error.passValue}</p>
-						)} */}
 						<br />
 						{err && <span className={cx('err')}>{err}</span>}
 						<button className={cx('btn')} onClick={handlerSignIn}>
 							Sign IN
 						</button>
-						{/* <p>
-							Create an account? <Link to='/register'>Click</Link>
-						</p> */}
 					</div>
 				</div>
 			</div>
