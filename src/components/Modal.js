@@ -71,6 +71,7 @@ const Modal = ({ isOpen, children, id }) => {
 			}
 			// Thực hiện các thao tác khác sau khi thêm sản phẩm thành công
 			dispatch(modalAction.closeModal());
+			console.log('res', res);
 		} catch (error) {
 			console.error('Error adding product:', error);
 		}
