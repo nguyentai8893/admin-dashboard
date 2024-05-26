@@ -45,6 +45,7 @@ const Modal = ({ isOpen, children, id }) => {
 		}
 		setImageUrls(urls);
 	};
+	console.log('ủl', imageUrls);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
