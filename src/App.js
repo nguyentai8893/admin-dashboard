@@ -8,20 +8,20 @@ import Users from './components/Users';
 import History from './components/History';
 import Products from './components/Products';
 import store from './store';
-import { Provider, useSelector } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import useAxios from './hook/useAxios';
 import DetailOrder from './components/DetailOrder';
 import AdminChat from './components/AdminChat';
 const authenticated = () => {
 	const user = useSelector((state) => state.auth.user);
+	const dispatch = useDispatch();
 
-	useEffect(() => {
-		const storedUser = localStorage.getItem('user');
-		if (storedUser && !user) {
-			dispatch(loginAction.onLogin(JSON.parse(storedUser)));
-		}
-	}, [user, dispatch]);
+	const storedUser = localStorage.getItem('user');
+	if (storedUser && !user) {
+		dispatch(loginAction.onLogin(JSON.parse(storedUser)));
+	}
+
 	if (user) {
 		return true;
 	}
