@@ -8,9 +8,7 @@ import Users from './components/Users';
 import History from './components/History';
 import Products from './components/Products';
 import store from './store';
-import { Provider, useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import useAxios from './hook/useAxios';
+import { Provider } from 'react-redux';
 import DetailOrder from './components/DetailOrder';
 import AdminChat from './components/AdminChat';
 const authenticated = () => {
