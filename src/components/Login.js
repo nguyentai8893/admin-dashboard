@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Login.module.scss';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useAxios from '../hook/useAxios';
 import { useDispatch } from 'react-redux';
 import { loginAction } from '../store/loginUserSlice';
@@ -18,8 +18,7 @@ const Login = () => {
 		password: '',
 	});
 
-	const { loading, error, apiRequest } = useAxios();
-	// sử lý input data và validate
+	const { apiRequest } = useAxios();
 	const handlerSignIn = async () => {
 		try {
 			const res = await apiRequest(`${apiUrl}/api/login`, 'post', postData);

@@ -20,7 +20,7 @@ const ModalContent = () => {
 		price: '',
 	});
 
-	const { loading, error, apiRequest } = useAxios();
+	const { loading, apiRequest } = useAxios();
 	const dispatch = useDispatch();
 
 	const handleUpload = async (e) => {

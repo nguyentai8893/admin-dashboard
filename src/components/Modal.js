@@ -29,9 +29,8 @@ const Modal = ({ isOpen, children, id }) => {
 	const URL = id
 		? `${apiUrl}/api/update-product/${id}`
 		: `${apiUrl}/api/add-product`;
-	const { loading, error, apiRequest } = useAxios();
+	const { loading, apiRequest } = useAxios();
 	const dispatch = useDispatch();
-	//upload file to firebase
 	const handleUpload = async (e) => {
 		const files = e.target.files;
 		const urls = [];
